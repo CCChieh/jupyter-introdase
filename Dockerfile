@@ -6,7 +6,8 @@ RUN . /root/.bashrc \
 	&& apt-get update \
 	&& apt-get install texlive-xetex texlive-fonts-recommended texlive-generic-recommended -y \
 	&& mkdir -p /root/.jupyter/custom \
-	&& echo "conda activate daseIntro" >> ~/.bashrc
+	&& echo "conda activate daseIntro" >> ~/.bashrc \
+	&& echo "cd /home" >> ~/.bashrc
 COPY jupyter_notebook_config.py /root/.jupyter/
 COPY custom.js /root/.jupyter/custom/
 COPY entrypoint.sh /
