@@ -11,4 +11,5 @@ COPY jupyter_notebook_config.py /root/.jupyter/
 COPY custom.js /root/.jupyter/custom/
 COPY entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
+RUN ["chmod", "+x", "/entrypoint.sh"]
 EXPOSE 8888
