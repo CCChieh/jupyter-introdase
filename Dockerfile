@@ -9,5 +9,6 @@ RUN . /root/.bashrc \
 	&& echo "conda activate daseIntro" >> ~/.bashrc
 COPY jupyter_notebook_config.py /root/.jupyter/
 COPY custom.js /root/.jupyter/custom/
-ENTRYPOINT ["jupyter", "lab"]
+COPY entrypoint.sh /
+ENTRYPOINT ["/entrypoint.sh"]
 EXPOSE 8888
