@@ -14,5 +14,4 @@ COPY entrypoint.sh /
 
 RUN ["chmod", "+x", "/entrypoint.sh"]
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["jupyter", "lab"]
 EXPOSE 8888
