@@ -2,5 +2,5 @@
 
 . /root/.bashrc
 conda activate daseIntro
-jupyter lab &
+jupyter lab >> /root/jupyter.log &
 /bin/bash
